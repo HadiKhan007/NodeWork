@@ -29,3 +29,17 @@ const filePath = `${dirPath}/apple.txt`;
 //    Delete File
 
 // fs.unlinkSync(`${dirPath}/fruit.txt`);
+
+let a = 20;
+let b = 0;
+
+const waitData = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(40);
+  }, 2000);
+});
+
+waitData.then((data) => {
+  let b = data;
+  console.log(a + b);
+});
